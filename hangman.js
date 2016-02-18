@@ -21,14 +21,14 @@ game = {
   },
   getGuesses: function() {
     var usrL = prompt('gimme a letter');
-    var check = this.hiddenWord.indexOf(usrL);
+    this.guesses.push(usrL);
+    var check = this.word.indexOf(usrL);
     return check;
   },
-  
-  playGame: function() {
-    this.getWord();
-    this.showWord();
+  checkGuesses: function() {
 
+  },
+  playGame: function() {
   }
 };
 
