@@ -2,16 +2,15 @@ console.log("welcome to hangman");
 
 game = {
   word: [],
+  hiddenWord: [],
   displayWord: [],
   guesses: [],
   incorrectGuesses: 0,
   getWord: function() {
-    
-  },
-  getLetter: function() {
-    var usrL = prompt('gimme a letter');
-    this.guesses.push(usrL);
-    return usrL;
+    var usrWord = prompt('gimme a word');
+    this.hiddenWord= usrWord;
+    this.word = usrWord.split('');
+    return usrWord;
   },
   showWord: function () {
     //take game word and make an array / string with -'s
@@ -21,12 +20,11 @@ game = {
     this.displayWord = this.displayWord.join('');
   },
   getGuesses: function() {
-    this.guesses.forEach(function(a) {
-      if
-    })
-    var check = this.word.indexOf();
+    var usrL = prompt('gimme a letter');
+    var check = this.hiddenWord.indexOf(usrL);
     return check;
   },
+  
   playGame: function() {
     this.getWord();
     this.showWord();
